@@ -1,0 +1,14 @@
+agm-map {
+  height: 180px;
+  width: 320px;
+}
+.goggle-map-section {
+  border: 10px ridge gainsboro;
+}
+.fs-small {
+  font-size: 13px;
+}
+img {
+  height: 160px;
+  width: 167px;
+}

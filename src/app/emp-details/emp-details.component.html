@@ -1,0 +1,190 @@
+<div *ngIf="!employeeDeleted" class="container border p-3 pt-2 pb-0">
+    <img src="{{selectedEmployee?.image}}" alt="profile picture"
+        class="img-fluid rounded-circle w-25 h-25 bg-info mx-auto d-block border border-5 border-opacity-10 border-dark bg-opacity-10">
+    <p class="text-center fs-5 fw-bold mb-0">{{isMale==true?"Mr.":"Ms."}} {{selectedEmployee?.firstName}}
+        {{selectedEmployee?.lastName}}</p>
+    <p class="text-center fs-small text-black-50 fw-bold mb-0">{{selectedEmployee?.company?.role}}</p>
+    <div class=" p-2 m-0">
+        <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs nav-justified ">
+            <li [ngbNavItem]="1">
+                <a ngbNavLink>About</a>
+                <ng-template ngbNavContent class="m-0">
+                    <div class="bg-light p-3 rounded-bottom border">
+                        <div class="row mb-3 align-items-center justify-content-center">
+                            <div class="col-4 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">First Name:</small>
+                                <p class="fw-bold fs-small mb-0">
+                                    <span class="fw-bold fs-small mb-0"></span>
+                                    {{selectedEmployee?.firstName}}
+                                </p>
+                            </div>
+                            <div class="col-4 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">Mid Name:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.maidenName}}</p>
+                            </div>
+                            <div class="col-4 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">Last Name:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.lastName}}</p>
+                            </div>
+                        </div>
+                        <div class="row mb-3 align-items-center justify-content-center">
+                            <div class="border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">Email Id:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.email}}</p>
+                            </div>
+                        </div>
+                        <div class="row mb-3 align-items-center justify-content-center">
+                            <div class="col-6 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">Phone:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.phone}}</p>
+                            </div>
+                            <div class="col-6 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">User name:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.username}}</p>
+                            </div>
+                        </div>
+                        <div class="row mb-3 align-items-center justify-content-center">
+                            <div class="col-3 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">Age:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.age}}</p>
+                            </div>
+                            <div class="col-4 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">Gender:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.gender}}</p>
+                            </div>
+                            <div class="col-5 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">Birth Date:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.birthDate}}</p>
+                            </div>
+                        </div>
+                        <div class="row mb-3 align-items-center justify-content-center">
+                            <div class="col-6 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">Emp ID:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.empId}}</p>
+                            </div>
+                            <div class="col-6 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">Department:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.company?.department}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </li>
+            <li [ngbNavItem]="2">
+                <a ngbNavLink>Details</a>
+                <ng-template ngbNavContent>
+                    <div class="bg-light px-3 pb-0 rounded-bottom border">
+                        <div class="text-center text-muted fw-bold border-bottom border-top bg-white mb-2">
+                            Personal Details
+                        </div>
+                        <div class="row mb-3 align-items-center justify-content-center">
+                            <div class="col-3 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">Height:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.height}} cm</p>
+                            </div>
+                            <div class="col-4 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">Weight:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.weight}} kg</p>
+                            </div>
+                            <div class="col-5 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">Blood Group:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.bloodGroup}}</p>
+                            </div>
+                        </div>
+                        <div class="row mb-3 align-items-center justify-content-center">
+                            <div class="col-4 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">Eye Color:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.eyeColor}}</p>
+                            </div>
+                            <div class="col-4 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">Hair Color:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.hair?.color}}</p>
+                            </div>
+                            <div class="col-4 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">Hair Type:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.hair?.type}}</p>
+                            </div>
+                        </div>
+                        <div class="text-center text-muted fw-bold border-bottom border-top bg-white mb-2">
+                            Bank Details
+                        </div>
+                        <div class="row mb-3 align-items-center justify-content-center">
+                            <div class="col-7 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">Card Type:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.bank?.cardType}}</p>
+                            </div>
+                            <div class="col-5 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">Card Expiry:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.bank?.cardExpire}}</p>
+                            </div>
+                        </div>
+                        <div class="row mb-3 align-items-center justify-content-center">
+                            <div class="col-7 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">Card Number:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.bank?.cardNumber}}</p>
+                            </div>
+                            <div class="col-5 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">Currency:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.bank?.currency}}</p>
+                            </div>
+                        </div>
+                        <div class="row mb-3 align-items-center justify-content-center">
+                            <div class="border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">Account Number:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.bank?.accountNumber}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </li>
+            <li [ngbNavItem]="3">
+                <a ngbNavLink>Address</a>
+                <ng-template ngbNavContent>
+                    <div class="bg-light px-3 rounded-bottom border">
+                        <div class="row mb-3 mt-1 align-items-center justify-content-center">
+                            <div class="border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">Address:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.address?.address}}</p>
+                            </div>
+                        </div>
+                        <div class="row mb-3 align-items-center justify-content-center">
+                            <div class="col-4 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">City:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.address?.city}}</p>
+                            </div>
+                            <div class="col-4 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">State:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.address?.state}}</p>
+                            </div>
+                            <div class="col-4 border-start border-5 border-primary rounded-2 border-opacity-50">
+                                <small class="fw-bold text-muted">Postal Code:</small>
+                                <p class="fw-bold fs-small mb-0">{{selectedEmployee?.address?.postalCode}}</p>
+                            </div>
+                        </div>
+                        <div class="text-center text-muted fw-bold border-bottom bg-white">
+                            Location
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center my-2">
+                            <div class="goggle-map-section">
+                                <agm-map [latitude]="selectedEmployee?.address?.coordinates?.lat"
+                                    [longitude]="selectedEmployee?.address?.coordinates?.lng">
+                                    <agm-marker [latitude]="selectedEmployee?.address?.coordinates?.lat"
+                                        [longitude]="selectedEmployee?.address?.coordinates?.lng">
+                                    </agm-marker>
+                                </agm-map>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </li>
+        </ul>
+        <div [ngbNavOutlet]="nav" class="mt-1"></div>
+    </div>
+</div>
+<div *ngIf="employeeDeleted" class=" p-3 pt-2 pb-0 d-flex align-items-center justify-content-center mt-5 h-75">
+    <div>
+        <h1 class="fw-bold text-danger text-center mt-5">DELETED !</h1>
+    </div>
+    <img src="../../assets/images/delete.png" alt="trash bin showing the item is deleted"
+        class="img-fluid text-center d-block mx-auto">
+</div>

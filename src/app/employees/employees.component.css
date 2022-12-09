@@ -1,0 +1,29 @@
+table tr td img {
+  width: 35px;
+  height: 35px;
+}
+.table-section {
+  height: 575px;
+}
+.eye-icon {
+  color: blue;
+}
+.eye-icon:hover {
+  color: rgb(152, 152, 237);
+}
+.active {
+  color: gray;
+  font-size: 20px;
+}
+.error-status {
+  font-size: 150px;
+}
+input {
+  outline: none;
+}
+.show-hide-button {
+  font-size: 12px;
+}
+.delete-button i {
+  font-size: 15px;
+}

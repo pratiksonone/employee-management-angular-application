@@ -1,0 +1,37 @@
+<div class="row m-0 vh-100 ">
+    <div class="col-md-6 border-end bg-light">
+        <img src="../../assets/images/LocationGuru-logo.png" alt="" class="img-fluid im d-block mx-auto my-5 pt-5">
+        <div class="d-flex align-items-center justify-content-center">
+            <form class="form-group bg-dark p-3 rounded border border-3 border-primary" [formGroup]="loginForm"
+                (ngSubmit)="userLogin()">
+                <label class="fw-bold text-white" for="adminName">Admin Name :</label>
+                <input class="form-control mt-2 text-center" type="text" placeholder="Enter Name" id="adminName"
+                    formControlName="name" autocomplete="username" />
+                <small *ngIf="name && name.invalid && name.dirty" class="text-danger opacity-50 fw-bold">
+                    *Admin name is required
+                </small>
+                <br />
+                <label class="fw-bold text-white" for="password">Password :</label>
+                <input class="form-control mt-2 text-center" id="password" type="password" placeholder="Enter password"
+                    formControlName="password" autocomplete="current-password" />
+                <strong *ngIf="password && password.invalid && password.dirty">
+                    <small *ngIf="password.errors?.['required']" class="text-danger fw-bold opacity-50">
+                        *password is required
+                    </small>
+                    <small *ngIf="password.errors?.['minlength']" class="text-danger fw-bold opacity-50">
+                        enter atleast 5 characters
+                    </small>
+                    <small *ngIf="password.errors?.['noSpaceAllowed']" class="text-danger fw-bold opacity-50">
+                        Space not allowed</small>
+                </strong>
+                <br />
+                <button class="btn btn-primary mx-auto w-100 d-block mt-2" [disabled]="loginForm.invalid">
+                    Login
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-6 d-flex align-items-center justify-content-center bg-primary bg-opacity-10">
+        <img src="../../assets/images/company.png" alt="describing company work" class="img-fluid text-center">
+    </div>
+</div>

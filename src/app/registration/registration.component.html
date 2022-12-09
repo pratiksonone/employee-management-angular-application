@@ -1,0 +1,244 @@
+<div class="position-relative mb-0">
+    <form class="form-group container pb-5 " [formGroup]="registrationForm" (ngSubmit)="registerEmp()">
+        <div
+            class="row p-3 bg-primary bg-opacity-10 text-dark align-items-center justify-content-center fw-bold fs-4  border-top border-bottom my-3">
+            Personal Details</div>
+        <div class="row align-items-center justify-content-center">
+            <div class="form-floating col-md-3 mb-3 ">
+                <input type="text" class="form-control" id="firstName" placeholder="First Name"
+                    formControlName="firstName" autocomplete="given-name">
+                <label for="firstName" class="ms-3">First Name <span class="text-danger">*</span></label>
+            </div>
+            <div class="form-floating col-md-3  mb-3 ">
+                <input type="text" class="form-control" id="midName" placeholder="Mid Name" formControlName="maidenName"
+                    autocomplete="additional-name">
+                <label for="midName" class="ms-3">Mid Name <span class="text-danger">*</span></label>
+            </div>
+            <div class="form-floating col-md-3 mb-3 ">
+                <input type="text" class="form-control" id="lastName" placeholder="Last Name" formControlName="lastName"
+                    autocomplete="family-name">
+                <label for="lastName" class="ms-3">Last Name <span class="text-danger">*</span></label>
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-center">
+            <div class="form-floating col-md-6 mb-3">
+                <input type="email" class="form-control" id="email" placeholder="Email ID" formControlName="email"
+                    autocomplete="email">
+                <label for="email" class="ms-3">Email ID <span class="text-danger">*</span></label>
+            </div>
+            <div class="form-floating col-md-3  mb-3">
+                <input type="tel" class="form-control" id="phone" placeholder="Phone" formControlName="phone"
+                    autocomplete="tel">
+                <label for="phone" class="ms-3">Phone <span class="text-danger">*</span></label>
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-center">
+            <div class="form-floating col-md-3 mb-3">
+                <input type="number" class="form-control" id="age" placeholder="Age" formControlName="age"
+                    autocomplete="on">
+                <label for="age" class="ms-3">Age <span class="text-danger">*</span></label>
+            </div>
+            <div class="col-md-3  mb-3 ">
+                <select class="form-select py-3" formControlName="gender">
+                    <option value="" disabled>-- Gender -- <span class="text-danger">*</span>
+                    </option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
+            <div class="form-floating col-md-3 mb-3 ">
+                <input type="date" class="form-control" id="birthDate" placeholder="Birthdate"
+                    formControlName="birthDate" autocomplete="on">
+                <label for="birthDate" class="ms-3">Birthdate <span class="text-danger">*</span></label>
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-center">
+            <div class="form-floating col-md-3 mb-3">
+                <input type="number" class="form-control" id="height" placeholder="Height" formControlName="height"
+                    autocomplete="on">
+                <label for="height" class="ms-3">Height <span class="text-danger">*</span></label>
+            </div>
+            <div class="form-floating col-md-3 mb-3">
+                <input type="number" class="form-control" id="weight" placeholder="Weight" formControlName="weight"
+                    autocomplete="on">
+                <label for="weight" class="ms-3">Weight <span class="text-danger">*</span></label>
+            </div>
+            <div class="col-md-3  mb-3 ">
+                <select class="form-select py-3" formControlName="eyeColor">
+                    <option value="" disabled>-- Eye Color -- <span class="text-danger">*</span></option>
+                    <option value="black">black</option>
+                    <option value="brown">brown</option>
+                    <option value="Gray">Gray</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-3 mb-3" formGroupName="hair">
+                <select class="form-select py-3" formControlName="color">
+                    <option value="" disabled>-- Hair Color -- <span class="text-danger">*</span>
+                    </option>
+                    <option value="black">black</option>
+                    <option value="brown">brown</option>
+                    <option value="Blond">Blond</option>
+                    <option value="White/Gray">White/Gray</option>
+                    <option value="Rarely Red">Rarely Red</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="col-md-3  mb-3 " formGroupName="hair">
+                <select class="form-select py-3" formControlName="type">
+                    <option value="" disabled>-- Hair Type -- <span class="text-danger">*</span></option>
+                    <option value="Straight">Straight</option>
+                    <option value="Wavy">Wavy</option>
+                    <option value="Curly">Curly</option>
+                    <option value="Kinky">Kinky</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="col-md-3  mb-3 ">
+                <select class="form-select py-3" formControlName="bloodGroup">
+                    <option value="" disabled>-- Blood Group -- <span class="text-danger">*</span>
+                    </option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
+        <div
+            class="row p-3 bg-primary bg-opacity-10 text-dark align-items-center justify-content-center fw-bold fs-4 border-top border-bottom">
+            Address Details</div>
+        <div class="row align-items-center justify-content-center mt-3">
+            <div class="form-floating col-md-6 mb-3" formGroupName="address">
+                <input type="text" class="form-control" id="address" placeholder="Address" formControlName="address"
+                    autocomplete="street-address">
+                <label for="address" class="ms-3">Address <span class="text-danger">*</span></label>
+            </div>
+            <div class="form-floating col-md-3  mb-3" formGroupName="address">
+                <input type="text" class="form-control" id="city" placeholder="City" formControlName="city"
+                    autocomplete="address-level2">
+                <label for="city" class="ms-3">City <span class="text-danger">*</span></label>
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-center" formGroupName="address">
+            <div class="form-floating col-md-2 mb-3">
+                <input type="text" class="form-control" id="postalCode" placeholder="Postal Code"
+                    formControlName="postalCode" autocomplete="postal-code">
+                <label for="postalCode" class="ms-3">Postal Code <span class="text-danger">*</span></label>
+            </div>
+            <div class="form-floating col-md-3  mb-3">
+                <input type="text" class="form-control" id="state" placeholder="State" formControlName="state"
+                    autocomplete="address-level1">
+                <label for="state" class="ms-3">State <span class="text-danger">*</span></label>
+            </div>
+            <div class="form-floating col-md-2 mb-3" formGroupName="coordinates">
+                <input type="number" class="form-control" id="latitude" placeholder="Latitude" formControlName="lat"
+                    autocomplete="on">
+                <label for="latitude" class="ms-3">Latitude <span class="text-danger">*</span></label>
+            </div>
+            <div class="form-floating col-md-2 mb-3" formGroupName="coordinates">
+                <input type="number" class="form-control" id="longitude" placeholder="Longitude" formControlName="lng"
+                    autocomplete="on">
+                <label for="longitude" class="ms-3">Longitude <span class="text-danger">*</span></label>
+            </div>
+        </div>
+        <div
+            class="row p-3 bg-primary bg-opacity-10 text-dark align-items-center justify-content-center fw-bold fs-4 mb-3 border-top border-bottom">
+            Bank Details</div>
+        <div class="row align-items-center justify-content-center" formGroupName="bank">
+            <div class="form-floating col-md-3 mb-3">
+                <input type="text" class="form-control" placeholder="MM/YY" size="7" id="expiry" minlength="5"
+                    maxlength="7" formControlName="cardExpire" autocomplete="on" />
+                <label class="ms-3" for="expiry">Card Expiry:<span class="text-danger">*</span> <small
+                        class="text-muted">MM/YY</small></label>
+            </div>
+            <div class="col-md-3 mb-3">
+                <select class="form-select py-3" formControlName="cardType">
+                    <option value="" disabled>-- Card Type -- <span class="text-danger">*</span></option>
+                    <option value="Visa">Visa</option>
+                    <option value="MasterCard">MasterCard</option>
+                    <option value="Maestro">Maestro</option>
+                    <option value="EMV">EMV</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="col-md-3  mb-3 ">
+                <select class="form-select py-3" formControlName="currency">
+                    <option value="" disabled>-- Currency -- <span class="text-danger">*</span></option>
+                    <option value="INR">INR</option>
+                    <option value="USD">USD</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-center" formGroupName="bank">
+            <div class="form-floating col-md-5 mb-3">
+                <input type="text" class="form-control" id="accountNumber" placeholder="Account Number" size="11"
+                    minlength="11" maxlength="11" formControlName="accountNumber" autocomplete="on">
+                <label for="accountNumber" class="ms-3">Account Number <span class="text-danger">*</span></label>
+            </div>
+            <div class="form-floating col-md-4  mb-3">
+                <input type="text" class="form-control" id="cardNumber" placeholder="Card Number" size='16'
+                    minlength="16" maxlength="16" formControlName="cardNumber" autocomplete="on">
+                <label for="cardNumber" class="ms-3">Card Number <span class="text-danger">*</span></label>
+            </div>
+        </div>
+        <div
+            class="row p-3 bg-primary bg-opacity-10 text-dark align-items-center justify-content-center fw-bold fs-4 mb-3 border-top border-bottom">
+            Professional Details</div>
+        <div class="row align-items-center justify-content-center" formGroupName="company">
+            <div class="form-floating col-md-5 mb-3">
+                <input type="text" class="form-control" id="department" placeholder="Department"
+                    formControlName="department" autocomplete="on">
+                <label for="department" class="ms-3">Department <span class="text-danger">*</span></label>
+            </div>
+            <div class="form-floating col-md-4  mb-3">
+                <input type="text" class="form-control" id="cardNumber" placeholder="Role" formControlName="role"
+                    autocomplete="on">
+                <label for="cardNumber" class="ms-3">Role <span class="text-danger">*</span></label>
+            </div>
+        </div>
+        <div class="row align-items-center justify-content-center">
+            <div class="form-floating col-md-3 mb-3">
+                <input type="text" class="form-control" id="username" placeholder="User Name" formControlName="username"
+                    autocomplete="on">
+                <label for="username" class="ms-3">User Name <span class="text-danger">*</span></label>
+            </div>
+            <div class="form-floating col-md-3  mb-3">
+                <input type="text" class="form-control" id="employeeId" placeholder="Employee Id"
+                    formControlName="empId" autocomplete="on">
+                <label for="employeeId" class="ms-3">Employee Id <span class="text-danger">*</span></label>
+            </div>
+            <div class="form-floating col-md-3 mb-3">
+                <input type="url" class="form-control" id="image" placeholder="Image Url" formControlName="image"
+                    autocomplete="off">
+                <label for="image" class="ms-3">Image Url<span class="text-danger">*</span></label>
+            </div>
+        </div>
+        <button class="btn btn-primary mx-auto d-block mt-2 w-25 fw-bold fs-5 mb-1"
+            [disabled]="registrationForm.invalid">
+            Register
+        </button>
+        <div class="text-danger fw-bold fs-6 text-center" *ngIf="registrationForm.invalid && registrationForm.dirty">
+            Please ! check all the fields are properly filled
+        </div>
+        <div class="alert bg-success bg-opacity-50 position-absolute top-0 start-0 end-0 bottom-0 text-center"
+            *ngIf="registered">
+            <div class="position-absolute bottom-0">
+                <h1 class="text-white fw-bold">Successfully!</h1>
+                Registered an Employee... <strong>Thank You!</strong>
+            </div>
+        </div>
+    </form>
+</div>
+<app-alert-msg></app-alert-msg>

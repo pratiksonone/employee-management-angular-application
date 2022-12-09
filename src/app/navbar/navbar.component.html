@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-success bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand text-black-50 fw-bold fs-4 pe-5 border-end border-3 border-primary" routerLink="home">
+            <img src="../../assets/images/LocationGuru-logo.png" class="company-logo img-fluid" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link text-black-50 fw-bold fs-5 mx-3" aria-current="page" routerLink="home"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+            </div>
+            <div class="navbar-nav">
+                <a class="nav-link text-black-50 fw-bold fs-5 mx-3" aria-current="page" routerLink="employees"
+                    routerLinkActive="active">Employee List</a>
+            </div>
+            <div class="navbar-nav">
+                <a class="nav-link text-black-50 fw-bold fs-5 mx-3" aria-current="page" routerLink="register"
+                    routerLinkActive="active">Register</a>
+            </div>
+        </div>
+        <button class="btn btn-outline-primary fw-bold" (click)="logout()">Logout</button>
+    </div>
+</nav>

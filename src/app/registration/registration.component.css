@@ -1,0 +1,12 @@
+input.ng-invalid.ng-dirty,
+select.ng-pristine.ng-touched {
+  border-color: red;
+  box-shadow: 0 0 0 0.2rem rgba(255, 7, 7, 0.25);
+  border-left: 7px solid red;
+}
+input.ng-valid.ng-dirty,
+select.ng-valid.ng-dirty {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(9, 237, 62, 0.25);
+  border-left: 7px solid #28a745;
+}
